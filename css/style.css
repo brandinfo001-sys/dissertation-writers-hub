@@ -8928,3 +8928,479 @@ h3 {
     }
 
 }
+/* ================================================================
+   DESIGN HOTFIX
+   CLEAN IMAGES + LARGER TYPOGRAPHY
+   Paste at the VERY END of style.css
+================================================================ */
+
+
+/* ================================================================
+   1. REMOVE ALL EGG / BLOB SHAPES
+================================================================ */
+
+.hero-image-frame::before,
+.hero-image-frame::after,
+.services-image-wrapper::before,
+.services-image-wrapper::after,
+.about-image-wrapper::before,
+.about-image-wrapper::after,
+.faq-image-wrapper::before,
+.faq-image-wrapper::after,
+.page-hero-image-wrapper::before,
+.page-hero-image-wrapper::after,
+.about-story-image-wrapper::before,
+.about-story-image-wrapper::after {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* Remove old decorative shapes behind images */
+
+.hero-image-accent,
+.services-image-decoration,
+.about-image-accent,
+.faq-image-decoration,
+.about-hero-accent,
+.contact-hero-accent,
+.about-story-decoration,
+.page-hero-image-accent {
+    display: none !important;
+}
+
+
+
+/* ================================================================
+   2. CLEAN PREMIUM IMAGE CONTAINER
+================================================================ */
+
+.hero-image-frame,
+.services-image-wrapper,
+.about-image-wrapper,
+.faq-image-wrapper,
+.page-hero-image-wrapper,
+.about-story-image-wrapper {
+
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 520px !important;
+
+    aspect-ratio: 4 / 5 !important;
+
+    margin-inline: auto !important;
+
+    padding: 7px !important;
+
+    overflow: hidden !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid rgba(30, 58, 138, 0.12) !important;
+
+    border-radius: 28px !important;
+
+    box-shadow:
+        0 24px 55px rgba(30, 58, 138, 0.13) !important;
+}
+
+
+
+/* ================================================================
+   3. FORCE EVERY IMAGE TO COMPLETELY FILL ITS FRAME
+================================================================ */
+
+.hero-image-frame img,
+.services-image-wrapper img,
+.about-image-wrapper img,
+.faq-image-wrapper img,
+.page-hero-image-wrapper img,
+.about-story-image-wrapper img,
+
+.hero-image,
+.services-preview-image,
+.about-preview-image,
+.faq-preview-image,
+.page-hero-image,
+.about-story-image {
+
+    display: block !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: 100% !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    border: 0 !important;
+
+    border-radius: 21px !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+}
+
+
+
+/* ================================================================
+   4. REMOVE IMAGE HOVER MOVEMENT
+================================================================ */
+
+.hero-image-frame:hover img,
+.services-image-wrapper:hover img,
+.about-image-wrapper:hover img,
+.faq-image-wrapper:hover img,
+.page-hero-image-wrapper:hover img,
+.about-story-image-wrapper:hover img {
+    transform: none !important;
+}
+
+
+
+/* ================================================================
+   5. FLOATING CARD
+   Keep it, but make it cleaner and slightly larger
+================================================================ */
+
+.hero-floating-card,
+.about-floating-note,
+.faq-floating-card,
+.page-hero-floating-card,
+.about-story-note {
+
+    z-index: 10 !important;
+
+    left: -20px !important;
+    bottom: 24px !important;
+
+    width: 215px !important;
+
+    padding: 14px 15px !important;
+
+    border-radius: 12px !important;
+
+    background: rgba(255, 255, 255, 0.98) !important;
+
+    border:
+        1px solid rgba(30, 58, 138, 0.10) !important;
+
+    box-shadow:
+        0 12px 30px rgba(30, 58, 138, 0.15) !important;
+}
+
+
+
+/* ================================================================
+   6. STRONGER BASE TYPOGRAPHY
+================================================================ */
+
+body {
+    font-family:
+        "Inter",
+        Arial,
+        sans-serif !important;
+
+    font-size: 17.5px !important;
+
+    line-height: 1.7 !important;
+}
+
+
+
+/* ================================================================
+   7. FORCE NORMAL WEBSITE TEXT TO BE READABLE
+================================================================ */
+
+p,
+li,
+label,
+input,
+select,
+textarea {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+/* Cards currently contain several small font rules.
+   Override those too. */
+
+.service-card p,
+.trust-item p,
+.why-choose-item p,
+.academic-area-item p,
+.process-step p,
+.about-points p,
+.about-preview-content p,
+.services-intro p,
+.faq-answer,
+.faq-answer p,
+.contact-method-card p,
+.contact-guidance-panel p,
+.legal-document p,
+.legal-document li {
+    font-size: 17px !important;
+    line-height: 1.72 !important;
+}
+
+
+
+/* ================================================================
+   8. MONTSERRAT HEADINGS
+================================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-title,
+.section-title,
+.page-hero-title,
+.legal-hero-title {
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: -0.035em !important;
+}
+
+
+
+/* ================================================================
+   9. LARGER H1
+================================================================ */
+
+.hero-title,
+.page-hero-title {
+    font-size:
+        clamp(3.3rem, 5vw, 5rem) !important;
+
+    line-height: 1.05 !important;
+}
+
+
+
+/* ================================================================
+   10. LARGER SECTION HEADINGS
+================================================================ */
+
+.section-title,
+.legal-document h2 {
+    font-size:
+        clamp(2.35rem, 3.6vw, 3.5rem) !important;
+
+    line-height: 1.12 !important;
+}
+
+
+
+h3 {
+    font-size:
+        clamp(1.45rem, 2vw, 1.8rem) !important;
+}
+
+
+
+/* ================================================================
+   11. HERO / SECTION DESCRIPTIONS
+================================================================ */
+
+.hero-description,
+.page-hero-description,
+.section-description,
+.legal-hero-description {
+    font-size:
+        clamp(1.08rem, 1.4vw, 1.2rem) !important;
+
+    line-height: 1.72 !important;
+}
+
+
+
+/* ================================================================
+   12. NAVIGATION
+================================================================ */
+
+.nav-link,
+.mobile-nav-link {
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif !important;
+
+    font-size: 16px !important;
+
+    font-weight: 600 !important;
+}
+
+
+
+/* ================================================================
+   13. BUTTONS
+================================================================ */
+
+.btn {
+    min-height: 52px !important;
+
+    padding:
+        14px
+        23px !important;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif !important;
+
+    font-size: 16px !important;
+
+    font-weight: 700 !important;
+
+    line-height: 1.2 !important;
+}
+
+
+
+/* ================================================================
+   14. FLOATING CARD TYPOGRAPHY
+================================================================ */
+
+.hero-floating-card strong,
+.about-floating-note strong,
+.faq-floating-card strong,
+.page-hero-floating-card strong,
+.about-story-note strong {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+}
+
+
+.hero-floating-card span,
+.about-floating-note span,
+.faq-floating-card span,
+.page-hero-floating-card span,
+.about-story-note span {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+}
+
+
+
+/* ================================================================
+   15. FOOTER TEXT
+================================================================ */
+
+.site-footer p,
+.site-footer li,
+.site-footer a {
+    font-size: 15.5px !important;
+}
+
+
+
+/* ================================================================
+   16. TABLET
+================================================================ */
+
+@media (max-width: 1023px) {
+
+    .hero-image-frame,
+    .services-image-wrapper,
+    .about-image-wrapper,
+    .faq-image-wrapper,
+    .page-hero-image-wrapper,
+    .about-story-image-wrapper {
+        max-width: 470px !important;
+    }
+
+}
+
+
+
+/* ================================================================
+   17. MOBILE
+================================================================ */
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 16.5px !important;
+    }
+
+
+    p,
+    li,
+    label,
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+
+    .service-card p,
+    .trust-item p,
+    .why-choose-item p,
+    .academic-area-item p,
+    .process-step p,
+    .faq-answer,
+    .faq-answer p {
+        font-size: 16px !important;
+    }
+
+
+    .hero-image-frame,
+    .services-image-wrapper,
+    .about-image-wrapper,
+    .faq-image-wrapper,
+    .page-hero-image-wrapper,
+    .about-story-image-wrapper {
+
+        width: 92% !important;
+
+        max-width: 430px !important;
+
+        padding: 6px !important;
+
+        border-radius: 24px !important;
+    }
+
+
+    .hero-image-frame img,
+    .services-image-wrapper img,
+    .about-image-wrapper img,
+    .faq-image-wrapper img,
+    .page-hero-image-wrapper img,
+    .about-story-image-wrapper img {
+
+        border-radius: 18px !important;
+    }
+
+
+    .hero-floating-card,
+    .about-floating-note,
+    .faq-floating-card,
+    .page-hero-floating-card,
+    .about-story-note {
+
+        left: -8px !important;
+
+        bottom: 20px !important;
+
+        width: 195px !important;
+    }
+
+}
