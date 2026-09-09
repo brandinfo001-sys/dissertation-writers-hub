@@ -1019,6 +1019,605 @@ body.no-scroll {
 }
 
 
+/* ================================================================
+   DESIGN CORRECTION PHASE
+   PART 2 — PREMIUM IMAGE SYSTEM
+================================================================ */
+
+
+/* ================================================================
+   1. ALL MAJOR IMAGE WRAPPERS
+================================================================ */
+
+.hero-image-frame,
+.services-image-wrapper,
+.about-image-wrapper,
+.faq-image-wrapper,
+.page-hero-image-wrapper,
+.about-story-image-wrapper {
+    position: relative;
+
+    width: min(100%, 520px);
+
+    aspect-ratio: 4 / 5;
+
+    margin-inline: auto;
+
+    isolation: isolate;
+
+    overflow: visible;
+}
+
+
+
+/* ================================================================
+   2. ACTUAL IMAGE MASK
+   This removes the plain rectangle appearance.
+================================================================ */
+
+.hero-image,
+.services-preview-image,
+.about-preview-image,
+.faq-preview-image,
+.page-hero-image,
+.about-story-image {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    /*
+       Premium asymmetric editorial shape
+    */
+    border-radius:
+        38px
+        115px
+        38px
+        115px;
+
+    box-shadow:
+        0 28px 65px rgba(22, 46, 112, 0.15);
+
+    outline:
+        1px solid rgba(30, 58, 138, 0.06);
+
+    transition:
+        transform 500ms ease,
+        box-shadow 500ms ease;
+}
+
+
+
+/* Slight premium interaction */
+
+.hero-image-frame:hover .hero-image,
+.services-image-wrapper:hover .services-preview-image,
+.about-image-wrapper:hover .about-preview-image,
+.faq-image-wrapper:hover .faq-preview-image,
+.page-hero-image-wrapper:hover .page-hero-image,
+.about-story-image-wrapper:hover .about-story-image {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 34px 78px rgba(22, 46, 112, 0.2);
+}
+
+
+
+/* ================================================================
+   3. ORANGE SHAPE BEHIND IMAGES
+================================================================ */
+
+.hero-image-frame::before,
+.services-image-wrapper::before,
+.about-image-wrapper::before,
+.faq-image-wrapper::before,
+.page-hero-image-wrapper::before,
+.about-story-image-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    top: -22px;
+    right: -24px;
+
+    width: 46%;
+    height: 42%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F68712,
+            #F9A545
+        );
+
+    border-radius:
+        32px
+        90px
+        32px
+        90px;
+
+    opacity: 0.95;
+}
+
+
+
+/* ================================================================
+   4. BLUE SHAPE BEHIND LOWER CORNER
+================================================================ */
+
+.hero-image-frame::after,
+.services-image-wrapper::after,
+.about-image-wrapper::after,
+.faq-image-wrapper::after,
+.page-hero-image-wrapper::after,
+.about-story-image-wrapper::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    bottom: -26px;
+    left: -26px;
+
+    width: 48%;
+    height: 39%;
+
+    background: #DDEBFA;
+
+    border-radius:
+        90px
+        30px
+        90px
+        30px;
+}
+
+
+
+/* ================================================================
+   5. INNER BORDER / PREMIUM EDGE
+================================================================ */
+
+.hero-image-frame > img,
+.services-image-wrapper > img,
+.about-image-wrapper > img,
+.faq-image-wrapper > img,
+.page-hero-image-wrapper > img,
+.about-story-image-wrapper > img {
+    border:
+        5px solid
+        rgba(255, 255, 255, 0.95);
+}
+
+
+
+/* ================================================================
+   6. HERO IMAGE SLIGHTLY LARGER
+================================================================ */
+
+.hero-visual {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.hero-image-frame {
+    width: min(100%, 550px);
+}
+
+
+
+/* ================================================================
+   7. FLOATING INFORMATION CARDS
+================================================================ */
+
+.hero-floating-card,
+.about-floating-note,
+.faq-floating-card,
+.page-hero-floating-card,
+.about-story-note {
+    position: absolute;
+
+    z-index: 5;
+
+    left: -34px;
+    bottom: 34px;
+
+    width: min(230px, 72%);
+
+    padding: 14px 16px;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    border:
+        1px solid
+        rgba(226, 232, 240, 0.95);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 18px 45px
+        rgba(30, 58, 138, 0.16);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+
+/* ================================================================
+   8. FLOATING CARD ICONS
+================================================================ */
+
+.hero-card-icon,
+.about-floating-icon,
+.faq-floating-icon,
+.page-hero-floating-icon,
+.about-story-note-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    color: var(--brand-orange-dark);
+
+    background: #FFF3E6;
+
+    border-radius: 12px;
+}
+
+
+
+/* ================================================================
+   9. FLOATING CARD MAIN TEXT
+================================================================ */
+
+.hero-floating-card strong,
+.about-floating-note strong,
+.faq-floating-card strong,
+.page-hero-floating-card strong,
+.about-story-note strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: var(--font-heading);
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    color: #252223;
+}
+
+
+
+/* ================================================================
+   10. FLOATING CARD SMALL TEXT
+================================================================ */
+
+.hero-floating-card span,
+.about-floating-note span,
+.faq-floating-card span,
+.page-hero-floating-card span,
+.about-story-note span {
+    font-size: 0.77rem;
+
+    line-height: 1.4;
+}
+
+
+
+/* Don't alter icon SVG sizing */
+
+.hero-floating-card svg,
+.about-floating-note svg,
+.faq-floating-card svg,
+.page-hero-floating-card svg,
+.about-story-note svg {
+    flex-shrink: 0;
+}
+
+
+
+/* ================================================================
+   11. REMOVE / SOFTEN OLD DECORATION DIVS
+   Prevents old shapes from fighting with new design.
+================================================================ */
+
+.hero-image-accent,
+.services-image-decoration,
+.about-image-accent,
+.faq-image-decoration,
+.about-hero-accent,
+.contact-hero-accent,
+.about-story-decoration {
+    opacity: 0.16;
+
+    pointer-events: none;
+}
+
+
+
+/* ================================================================
+   12. SERVICES IMAGE
+================================================================ */
+
+.services-image-wrapper {
+    width: min(100%, 500px);
+}
+
+
+
+/* Different shape so every image does not feel cloned */
+
+.services-preview-image {
+    border-radius:
+        100px
+        34px
+        100px
+        34px;
+}
+
+
+
+/* ================================================================
+   13. ABOUT IMAGE
+================================================================ */
+
+.about-image-wrapper,
+.about-story-image-wrapper {
+    width: min(100%, 510px);
+}
+
+
+
+.about-preview-image,
+.about-story-image {
+    border-radius:
+        35px
+        120px
+        35px
+        120px;
+}
+
+
+
+/* ================================================================
+   14. FAQ IMAGE
+================================================================ */
+
+.faq-image-wrapper {
+    width: min(100%, 480px);
+}
+
+
+
+.faq-preview-image {
+    border-radius:
+        120px
+        35px
+        120px
+        35px;
+}
+
+
+
+/* ================================================================
+   15. SECONDARY PAGE HERO IMAGE
+================================================================ */
+
+.page-hero-visual {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.page-hero-image-wrapper {
+    width: min(100%, 510px);
+}
+
+
+
+.page-hero-image {
+    border-radius:
+        38px
+        120px
+        38px
+        120px;
+}
+
+
+
+/* ================================================================
+   16. MOBILE IMAGE FIX
+================================================================ */
+
+@media (max-width: 767px) {
+
+    .hero-image-frame,
+    .services-image-wrapper,
+    .about-image-wrapper,
+    .faq-image-wrapper,
+    .page-hero-image-wrapper,
+    .about-story-image-wrapper {
+        width: min(88%, 440px);
+
+        aspect-ratio: 4 / 5;
+    }
+
+
+    .hero-image,
+    .services-preview-image,
+    .about-preview-image,
+    .faq-preview-image,
+    .page-hero-image,
+    .about-story-image {
+        border-radius:
+            28px
+            75px
+            28px
+            75px;
+    }
+
+
+    .hero-image-frame::before,
+    .services-image-wrapper::before,
+    .about-image-wrapper::before,
+    .faq-image-wrapper::before,
+    .page-hero-image-wrapper::before,
+    .about-story-image-wrapper::before {
+        top: -14px;
+        right: -14px;
+
+        width: 42%;
+        height: 35%;
+
+        border-radius:
+            24px
+            58px
+            24px
+            58px;
+    }
+
+
+    .hero-image-frame::after,
+    .services-image-wrapper::after,
+    .about-image-wrapper::after,
+    .faq-image-wrapper::after,
+    .page-hero-image-wrapper::after,
+    .about-story-image-wrapper::after {
+        bottom: -15px;
+        left: -15px;
+
+        width: 43%;
+        height: 34%;
+    }
+
+
+    .hero-floating-card,
+    .about-floating-note,
+    .faq-floating-card,
+    .page-hero-floating-card,
+    .about-story-note {
+        left: 14px;
+        bottom: 18px;
+
+        width: min(230px, 72%);
+
+        padding: 12px 14px;
+    }
+
+}
+
+
+
+/* ================================================================
+   17. SMALL MOBILE
+================================================================ */
+
+@media (max-width: 479px) {
+
+    .hero-image-frame,
+    .services-image-wrapper,
+    .about-image-wrapper,
+    .faq-image-wrapper,
+    .page-hero-image-wrapper,
+    .about-story-image-wrapper {
+        width: 92%;
+    }
+
+
+    .hero-floating-card,
+    .about-floating-note,
+    .faq-floating-card,
+    .page-hero-floating-card,
+    .about-story-note {
+        width: 72%;
+
+        left: 10px;
+
+        bottom: 14px;
+    }
+
+
+    .hero-floating-card strong,
+    .about-floating-note strong,
+    .faq-floating-card strong,
+    .page-hero-floating-card strong,
+    .about-story-note strong {
+        font-size: 0.82rem;
+    }
+
+
+    .hero-floating-card span,
+    .about-floating-note span,
+    .faq-floating-card span,
+    .page-hero-floating-card span,
+    .about-story-note span {
+        font-size: 0.72rem;
+    }
+
+}
+
+
+
+/* ================================================================
+   18. REDUCED MOTION
+================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-image,
+    .services-preview-image,
+    .about-preview-image,
+    .faq-preview-image,
+    .page-hero-image,
+    .about-story-image {
+        transition: none;
+    }
+
+
+    .hero-image-frame:hover .hero-image,
+    .services-image-wrapper:hover .services-preview-image,
+    .about-image-wrapper:hover .about-preview-image,
+    .faq-image-wrapper:hover .faq-preview-image,
+    .page-hero-image-wrapper:hover .page-hero-image,
+    .about-story-image-wrapper:hover .about-story-image {
+        transform: none;
+    }
+
+}
+
+
 
 /* ================================================================
    CSS PART 2 CONTINUES BELOW
