@@ -9404,3 +9404,132 @@ h3 {
     }
 
 }
+/* ================================================================
+   IMAGE FINISHING PATCH
+================================================================ */
+
+
+/* Thinner, cleaner frame */
+
+.hero-image-frame,
+.services-image-wrapper,
+.about-image-wrapper,
+.faq-image-wrapper,
+.page-hero-image-wrapper,
+.about-story-image-wrapper {
+
+    padding: 4px !important;
+
+    border-radius: 24px !important;
+
+    border:
+        1px solid rgba(30, 58, 138, 0.10) !important;
+
+    box-shadow:
+        0 18px 42px rgba(30, 58, 138, 0.11) !important;
+}
+
+
+/* Match image radius to frame */
+
+.hero-image-frame img,
+.services-image-wrapper img,
+.about-image-wrapper img,
+.faq-image-wrapper img,
+.page-hero-image-wrapper img,
+.about-story-image-wrapper img {
+
+    border-radius: 19px !important;
+}
+
+
+
+/* Bigger, more readable floating cards */
+
+.hero-floating-card,
+.about-floating-note,
+.faq-floating-card,
+.page-hero-floating-card,
+.about-story-note {
+
+    width: 230px !important;
+
+    left: -14px !important;
+    bottom: 22px !important;
+
+    padding: 15px 16px !important;
+
+    border-radius: 13px !important;
+
+    box-shadow:
+        0 14px 32px rgba(30, 58, 138, 0.14) !important;
+}
+
+
+
+/* Floating card heading */
+
+.hero-floating-card strong,
+.about-floating-note strong,
+.faq-floating-card strong,
+.page-hero-floating-card strong,
+.about-story-note strong {
+
+    font-size: 15px !important;
+
+    line-height: 1.35 !important;
+
+    font-weight: 700 !important;
+}
+
+
+
+/* Floating card supporting text */
+
+.hero-floating-card span,
+.about-floating-note span,
+.faq-floating-card span,
+.page-hero-floating-card span,
+.about-story-note span {
+
+    font-size: 13.5px !important;
+
+    line-height: 1.45 !important;
+}
+
+
+
+/* Remove remaining image-area decorative lines/shapes */
+
+.hero-image-accent,
+.services-image-decoration,
+.about-image-accent,
+.faq-image-decoration,
+.about-story-decoration,
+.page-hero-image-accent,
+.about-hero-accent,
+.contact-hero-accent {
+
+    display: none !important;
+}
+
+
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+    .hero-floating-card,
+    .about-floating-note,
+    .faq-floating-card,
+    .page-hero-floating-card,
+    .about-story-note {
+
+        width: 210px !important;
+
+        left: -6px !important;
+
+        bottom: 18px !important;
+    }
+
+}
