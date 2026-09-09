@@ -10200,3 +10200,713 @@ p {
     }
 
 }
+/* ================================================================
+   DESIGN CORRECTION — PART 4
+   BRAND PERSONALITY SYSTEM
+   MORE ORANGE + LARGER TYPE + 3D ICONS + DISTINCT CARDS
+================================================================ */
+
+
+/* ================================================================
+   1. STRONGER FOUNDATION TYPOGRAPHY
+================================================================ */
+
+html {
+    font-size: 18px !important;
+}
+
+
+body {
+    font-size: 19px !important;
+    line-height: 1.72 !important;
+}
+
+
+/* Main reading text */
+
+main p,
+main li {
+    font-size: 18px !important;
+    line-height: 1.72 !important;
+}
+
+
+/* Important descriptions */
+
+.hero-description,
+.page-hero-description,
+.section-description,
+.about-preview-content > p,
+.services-intro > p,
+.process-header > p,
+.faq-preview-content > p {
+
+    font-size: 19px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+/* ================================================================
+   2. CARD TEXT — NO MORE TINY FOUNDATION TEXT
+================================================================ */
+
+.service-card p,
+.trust-item p,
+.why-choose-item p,
+.academic-area-item p,
+.process-step p,
+.about-points p,
+.contact-method-card p,
+.contact-guidance-panel p,
+.contact-enquiry-side p,
+.faq-answer p {
+
+    font-size: 17.5px !important;
+    line-height: 1.68 !important;
+
+    color: #4A4A4A !important;
+}
+
+
+
+/* ================================================================
+   3. BIGGER CARD HEADINGS
+================================================================ */
+
+.service-card h3,
+.trust-item h3,
+.why-choose-item h3,
+.academic-area-item h3,
+.process-step h3,
+.contact-method-card h3 {
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif !important;
+
+    font-size:
+        clamp(1.28rem, 1.7vw, 1.6rem) !important;
+
+    font-weight: 750 !important;
+
+    line-height: 1.25 !important;
+
+    letter-spacing: -0.025em !important;
+}
+
+
+
+/* ================================================================
+   4. NEW CARD SYSTEM
+   No more repetitive pure-white cards
+================================================================ */
+
+.service-card,
+.trust-item,
+.why-choose-item,
+.academic-area-item,
+.process-step,
+.contact-method-card {
+
+    position: relative !important;
+
+    overflow: hidden !important;
+
+    padding: 30px !important;
+
+    border-radius: 18px !important;
+
+    border: 1px solid rgba(246, 135, 18, 0.18) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFF9F2 0%,
+            #FFF0DC 100%
+        ) !important;
+
+    box-shadow:
+        0 14px 32px rgba(57, 53, 54, 0.07) !important;
+}
+
+
+
+/* ================================================================
+   5. ALTERNATING BLUE-TINTED CARDS
+================================================================ */
+
+.service-card:nth-child(even),
+.trust-item:nth-child(even),
+.why-choose-item:nth-child(even),
+.academic-area-item:nth-child(even),
+.process-step:nth-child(even),
+.contact-method-card:nth-child(even) {
+
+    background:
+        linear-gradient(
+            145deg,
+            #F6FAFF 0%,
+            #E5F1FC 100%
+        ) !important;
+
+    border-color:
+        rgba(68, 141, 210, 0.20) !important;
+}
+
+
+
+/* ================================================================
+   6. ORANGE EDITORIAL CORNER
+   Gives the boxes their own identity
+================================================================ */
+
+.service-card::after,
+.trust-item::after,
+.why-choose-item::after,
+.academic-area-item::after,
+.process-step::after,
+.contact-method-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    z-index: 0;
+
+    top: 0;
+    right: 0;
+
+    width: 58px;
+    height: 58px;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 48%,
+            rgba(246, 135, 18, 0.95) 49%
+        );
+
+    pointer-events: none;
+}
+
+
+
+/* Keep content above decorative corner */
+
+.service-card > *,
+.trust-item > *,
+.why-choose-item > *,
+.academic-area-item > *,
+.process-step > *,
+.contact-method-card > * {
+
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* ================================================================
+   7. ORANGE LEFT ACCENT
+================================================================ */
+
+.service-card::before,
+.trust-item::before,
+.why-choose-item::before,
+.academic-area-item::before,
+.process-step::before,
+.contact-method-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 24px;
+    bottom: 24px;
+    left: 0;
+
+    width: 5px;
+
+    height: auto !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            #F68712,
+            #FFB65E
+        ) !important;
+
+    border-radius:
+        0 6px 6px 0;
+}
+
+
+
+/* ================================================================
+   8. 3D-STYLE ICON TILES
+================================================================ */
+
+.trust-icon,
+.service-icon,
+.why-choose-icon,
+.academic-area-icon,
+.process-step-icon,
+.contact-method-icon,
+.about-point-icon {
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 54px !important;
+    height: 54px !important;
+
+    margin-bottom: 20px !important;
+
+    color: #C96305 !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFDF9 0%,
+            #FFE8C5 58%,
+            #FFC46F 100%
+        ) !important;
+
+    border:
+        1px solid
+        rgba(246, 135, 18, 0.30) !important;
+
+    border-radius: 14px !important;
+
+    box-shadow:
+        inset 3px 3px 5px rgba(255, 255, 255, 0.95),
+        inset -3px -3px 7px rgba(217, 111, 8, 0.18),
+        0 5px 0 #D96F08,
+        0 10px 18px rgba(217, 111, 8, 0.20) !important;
+
+    transform: translateY(-3px);
+}
+
+
+
+/* Icon glyph itself */
+
+.trust-icon svg,
+.service-icon svg,
+.why-choose-icon svg,
+.academic-area-icon svg,
+.process-step-icon svg,
+.contact-method-icon svg,
+.about-point-icon svg {
+
+    width: 25px !important;
+    height: 25px !important;
+
+    color: #C96305 !important;
+
+    stroke-width: 2 !important;
+}
+
+
+
+/* ================================================================
+   9. ALTERNATE BLUE 3D ICONS
+================================================================ */
+
+.service-card:nth-child(even) .service-icon,
+.trust-item:nth-child(even) .trust-icon,
+.why-choose-item:nth-child(even) .why-choose-icon,
+.academic-area-item:nth-child(even) .academic-area-icon,
+.process-step:nth-child(even) .process-step-icon,
+.contact-method-card:nth-child(even) .contact-method-icon {
+
+    color: #1E3A8A !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFFFF 0%,
+            #D9EAFA 58%,
+            #A8CDEC 100%
+        ) !important;
+
+    border-color:
+        rgba(30, 58, 138, 0.20) !important;
+
+    box-shadow:
+        inset 3px 3px 5px rgba(255,255,255,0.95),
+        inset -3px -3px 7px rgba(30,58,138,0.12),
+        0 5px 0 #448DD2,
+        0 10px 18px rgba(30,58,138,0.16) !important;
+}
+
+
+
+/* ================================================================
+   10. MORE ORANGE IN MAIN SECTIONS
+================================================================ */
+
+.trust-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFF8EF 0%,
+            #FFF0DC 100%
+        ) !important;
+}
+
+
+
+.services-preview-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFDF9 0%,
+            #FFF5E8 52%,
+            #EEF5FC 100%
+        ) !important;
+}
+
+
+
+.why-choose-section {
+
+    background:
+        linear-gradient(
+            130deg,
+            #FFF3E4 0%,
+            #FFF9F2 50%,
+            #EAF4FD 100%
+        ) !important;
+}
+
+
+
+.process-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #EAF4FD 0%,
+            #FFF7ED 100%
+        ) !important;
+}
+
+
+
+.faq-preview-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFF7EC 0%,
+            #EEF5FC 100%
+        ) !important;
+}
+
+
+
+/* ================================================================
+   11. STRONGER SECTION EYEBROWS
+================================================================ */
+
+.section-eyebrow,
+.hero-eyebrow,
+.page-hero-eyebrow {
+
+    color: #C85F00 !important;
+
+    font-size: 14px !important;
+
+    font-weight: 800 !important;
+}
+
+
+
+.section-eyebrow::before,
+.page-hero-eyebrow::before {
+
+    height: 4px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            #F68712,
+            #FFB254
+        ) !important;
+}
+
+
+
+/* ================================================================
+   12. MORE ORANGE CTA BUTTONS
+================================================================ */
+
+.header-whatsapp-btn,
+.mobile-whatsapp-btn,
+.final-whatsapp-btn,
+.footer-cta {
+
+    color: #FFFFFF !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F68712 0%,
+            #DF7005 100%
+        ) !important;
+
+    border-color: #F68712 !important;
+
+    box-shadow:
+        0 8px 0 #BF5D05,
+        0 14px 24px rgba(217, 111, 8, 0.22) !important;
+}
+
+
+
+.header-whatsapp-btn:hover,
+.mobile-whatsapp-btn:hover,
+.final-whatsapp-btn:hover,
+.footer-cta:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 0 #BF5D05,
+        0 12px 24px rgba(217, 111, 8, 0.28) !important;
+}
+
+
+
+/* ================================================================
+   13. IMAGE FLOATING CARD
+   This is the small element in your screenshot.
+================================================================ */
+
+.hero-floating-card,
+.about-floating-note,
+.faq-floating-card,
+.page-hero-floating-card,
+.about-story-note {
+
+    width: 270px !important;
+
+    min-height: 88px !important;
+
+    left: -18px !important;
+    bottom: 24px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 14px !important;
+
+    padding:
+        15px
+        17px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FFFFFF 0%,
+            #FFF5E9 100%
+        ) !important;
+
+    border:
+        1px solid
+        rgba(246,135,18,0.25) !important;
+
+    border-left:
+        5px solid
+        #F68712 !important;
+
+    border-radius:
+        12px 18px 18px 12px !important;
+
+    box-shadow:
+        0 14px 34px
+        rgba(30, 58, 138, 0.15) !important;
+}
+
+
+
+/* ================================================================
+   14. BIGGER 3D ICON INSIDE IMAGE CARD
+================================================================ */
+
+.hero-card-icon,
+.about-floating-icon,
+.faq-floating-icon,
+.page-hero-floating-icon,
+.about-story-note-icon {
+
+    display: flex !important;
+
+    flex: 0 0 48px !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    color: #CE6507 !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFDF9,
+            #FFE5BD 65%,
+            #FFC36B
+        ) !important;
+
+    border-radius: 13px !important;
+
+    box-shadow:
+        inset 2px 2px 4px #FFFFFF,
+        inset -3px -3px 6px rgba(217,111,8,0.17),
+        0 4px 0 #D96F08,
+        0 8px 14px rgba(217,111,8,0.18) !important;
+}
+
+
+
+/* ================================================================
+   15. IMAGE CARD TEXT — MUCH MORE READABLE
+================================================================ */
+
+.hero-floating-card strong,
+.about-floating-note strong,
+.faq-floating-card strong,
+.page-hero-floating-card strong,
+.about-story-note strong {
+
+    margin-bottom: 4px !important;
+
+    font-family:
+        "Montserrat",
+        Arial,
+        sans-serif !important;
+
+    font-size: 15.5px !important;
+
+    font-weight: 750 !important;
+
+    line-height: 1.25 !important;
+
+    color: #272426 !important;
+}
+
+
+
+.hero-floating-card span,
+.about-floating-note span,
+.faq-floating-card span,
+.page-hero-floating-card span,
+.about-story-note span {
+
+    font-size: 14px !important;
+
+    line-height: 1.4 !important;
+
+    color: #5F6268 !important;
+}
+
+
+
+/* ================================================================
+   16. LINKS INSIDE CARDS
+================================================================ */
+
+.service-card .text-link,
+.services-grid .text-link {
+
+    color: #C96305 !important;
+
+    font-size: 16.5px !important;
+
+    font-weight: 750 !important;
+}
+
+
+
+/* ================================================================
+   17. MOBILE
+================================================================ */
+
+@media (max-width: 767px) {
+
+    html {
+        font-size: 17px !important;
+    }
+
+
+    body {
+        font-size: 17px !important;
+    }
+
+
+    main p,
+    main li {
+
+        font-size: 16.5px !important;
+    }
+
+
+    .service-card,
+    .trust-item,
+    .why-choose-item,
+    .academic-area-item,
+    .process-step,
+    .contact-method-card {
+
+        padding: 25px !important;
+    }
+
+
+    .hero-floating-card,
+    .about-floating-note,
+    .faq-floating-card,
+    .page-hero-floating-card,
+    .about-story-note {
+
+        width: 235px !important;
+
+        min-height: 80px !important;
+
+        left: -5px !important;
+
+        padding:
+            13px
+            14px !important;
+    }
+
+
+    .hero-floating-card strong,
+    .about-floating-note strong,
+    .faq-floating-card strong,
+    .page-hero-floating-card strong,
+    .about-story-note strong {
+
+        font-size: 14px !important;
+    }
+
+
+    .hero-floating-card span,
+    .about-floating-note span,
+    .faq-floating-card span,
+    .page-hero-floating-card span,
+    .about-story-note span {
+
+        font-size: 12.5px !important;
+    }
+
+}
