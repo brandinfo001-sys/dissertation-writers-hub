@@ -10397,3 +10397,537 @@ textarea {
     }
 
 }
+/* ================================================================
+   SECONDARY PAGE REPAIR — PART 1
+   ABOUT + SERVICES
+================================================================ */
+
+
+/* ================================================================
+   ABOUT — WHO WE ARE
+================================================================ */
+
+.about-story-section {
+    background: #ffffff;
+}
+
+.about-story-container {
+    display: grid;
+    grid-template-columns: minmax(340px, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(50px, 7vw, 100px);
+}
+
+.about-story-content {
+    max-width: 720px;
+}
+
+.about-story-lead {
+    font-size: 20px !important;
+    line-height: 1.7 !important;
+    font-weight: 500;
+    color: #393536;
+}
+
+.about-story-text {
+    font-size: 18px !important;
+}
+
+
+/* About key points */
+
+.about-story-points {
+    display: grid;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+.about-story-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 17px 18px;
+
+    background: #F7F9FC;
+
+    border-left: 4px solid #F68712;
+    border-radius: 8px 16px 16px 8px;
+}
+
+.about-story-point-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    color: #ffffff;
+    background: #F68712;
+
+    border-radius: 10px;
+}
+
+.about-story-point strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    color: #1E3A8A;
+}
+
+.about-story-point span {
+    font-size: 16.5px;
+    line-height: 1.55;
+
+    color: #5C6470;
+}
+
+.about-story-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+
+/* ================================================================
+   ABOUT — WHAT WE DO
+================================================================ */
+
+.about-what-we-do-section {
+    background: #EEF5FC !important;
+}
+
+.what-we-do-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 48px;
+}
+
+.what-we-do-item {
+    position: relative;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #DCE6F0;
+    border-radius: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(30, 58, 138, 0.07);
+}
+
+.what-we-do-item:nth-child(2),
+.what-we-do-item:nth-child(5) {
+    background: #FFF7ED;
+
+    border-color: rgba(246, 135, 18, 0.20);
+}
+
+.what-we-do-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: #F68712;
+}
+
+.what-we-do-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 21px;
+
+    color: #1E3A8A;
+
+    background: #E4F0FB;
+
+    border-radius: 14px;
+}
+
+.what-we-do-item:nth-child(2) .what-we-do-icon,
+.what-we-do-item:nth-child(5) .what-we-do-icon {
+    color: #D96F08;
+    background: #FFE7C8;
+}
+
+.what-we-do-item h3 {
+    margin-bottom: 12px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 22px !important;
+    line-height: 1.3;
+
+    color: #252223;
+}
+
+.what-we-do-item p {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+/* ================================================================
+   SERVICES — INTRODUCTION
+================================================================ */
+
+.services-overview-section {
+    background: #ffffff;
+}
+
+.services-page-intro {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(280px, 0.65fr);
+
+    align-items: center;
+
+    gap: 55px;
+}
+
+.services-page-intro-content {
+    max-width: 800px;
+}
+
+.services-page-intro-note {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    padding: 26px;
+
+    background: #FFF4E5;
+
+    border: 1px solid
+        rgba(246, 135, 18, 0.24);
+
+    border-left:
+        5px solid #F68712;
+
+    border-radius:
+        10px 20px 20px 10px;
+}
+
+.services-page-note-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 52px;
+
+    width: 52px;
+    height: 52px;
+
+    color: #ffffff;
+    background: #F68712;
+
+    border-radius: 13px;
+}
+
+.services-page-intro-note strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 18px;
+
+    color: #252223;
+}
+
+.services-page-intro-note p {
+    margin-bottom: 8px;
+
+    font-size: 16.5px !important;
+}
+
+
+
+/* ================================================================
+   SERVICES — GROUPS
+================================================================ */
+
+.services-page-group {
+    margin-top: 85px;
+}
+
+.services-group-heading {
+    max-width: 780px;
+
+    margin-bottom: 36px;
+}
+
+.services-group-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.07em;
+
+    color: #D96F08;
+}
+
+.services-group-heading h2 {
+    margin-bottom: 13px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size:
+        clamp(2rem, 3vw, 3rem) !important;
+
+    line-height: 1.15;
+}
+
+.services-group-heading p {
+    font-size: 18px !important;
+}
+
+
+
+/* ================================================================
+   SERVICES — DETAILED CARDS
+================================================================ */
+
+.detailed-services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+.detailed-service-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #DEE6EF;
+
+    border-top:
+        5px solid #1E3A8A;
+
+    border-radius:
+        18px;
+
+    box-shadow:
+        0 14px 36px
+        rgba(30, 58, 138, 0.07);
+}
+
+.detailed-service-card:nth-child(even) {
+    border-top-color: #F68712;
+}
+
+.detailed-service-card-top {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.detailed-service-number {
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    color: #F68712;
+}
+
+.detailed-service-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    color: #1E3A8A;
+
+    background: #EAF3FC;
+
+    border-radius: 15px;
+}
+
+.detailed-service-card:nth-child(even)
+.detailed-service-icon {
+    color: #D96F08;
+    background: #FFF0DD;
+}
+
+.detailed-service-title {
+    margin-bottom: 13px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 24px !important;
+
+    line-height: 1.25;
+}
+
+.detailed-service-description {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+.detailed-service-support {
+    margin-top: 22px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #E2E8F0;
+}
+
+.detailed-service-support h4 {
+    margin-bottom: 12px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 17px;
+
+    color: #1E3A8A;
+}
+
+.detailed-service-support ul {
+    display: grid;
+
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.detailed-service-support li {
+    position: relative;
+
+    padding-left: 21px;
+
+    font-size: 16.5px !important;
+}
+
+.detailed-service-support li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: #F68712;
+
+    font-weight: 800;
+}
+
+.detailed-service-actions {
+    margin-top: auto;
+
+    padding-top: 25px;
+}
+
+
+
+/* ================================================================
+   TABLET
+================================================================ */
+
+@media (max-width: 1023px) {
+
+    .about-story-container,
+    .services-page-intro {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .what-we-do-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+
+/* ================================================================
+   MOBILE
+================================================================ */
+
+@media (max-width: 767px) {
+
+    .what-we-do-grid,
+    .detailed-services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .what-we-do-item,
+    .detailed-service-card {
+        padding: 25px;
+    }
+
+    .services-page-group {
+        margin-top: 65px;
+    }
+
+    .about-story-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .about-story-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
