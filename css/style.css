@@ -11856,3 +11856,281 @@ textarea {
     }
 
 }
+/* ================================================================
+   FAQ FINAL ALIGNMENT FIX
+================================================================ */
+
+
+/* One consistent content rail */
+
+.faq-category-intro,
+.faq-page-accordion {
+    width: 100% !important;
+    max-width: 980px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+
+
+/* ================================================================
+   CATEGORY NAVIGATION
+================================================================ */
+
+.faq-category-navigation {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin-top: 30px !important;
+
+    padding:
+        20px
+        22px !important;
+
+    background: #162E70 !important;
+
+    border-bottom:
+        4px solid #F68712 !important;
+
+    border-radius: 10px !important;
+}
+
+
+.faq-category-nav-label {
+    display: block !important;
+
+    margin-bottom: 13px !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.2 !important;
+}
+
+
+.faq-category-nav-list {
+    display: flex !important;
+
+    flex-wrap: wrap !important;
+
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    width: 100% !important;
+}
+
+
+.faq-category-nav-list li {
+    margin: 0 !important;
+}
+
+
+.faq-category-link {
+    min-height: 38px !important;
+
+    padding:
+        8px
+        13px !important;
+
+    font-size: 13.5px !important;
+}
+
+
+
+/* ================================================================
+   HELP CARD — EXACT SAME WIDTH
+================================================================ */
+
+.faq-help-card {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin:
+        14px
+        0
+        0 !important;
+
+    grid-template-columns:
+        48px
+        minmax(0, 1fr) !important;
+
+    gap: 16px !important;
+
+    padding:
+        18px
+        20px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+.faq-help-card-icon {
+    width: 44px !important;
+    height: 44px !important;
+}
+
+
+.faq-help-card strong {
+    font-size: 16px !important;
+}
+
+
+.faq-help-card p {
+    font-size: 15px !important;
+
+    line-height: 1.5 !important;
+}
+
+
+
+/* ================================================================
+   GENERAL FAQ HEADING
+================================================================ */
+
+.faq-page-accordion {
+    margin-top: 38px !important;
+}
+
+
+.faq-category-heading {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 13px !important;
+
+    margin-bottom: 20px !important;
+}
+
+
+.faq-category-number {
+    flex:
+        0
+        0
+        44px !important;
+
+    width: 44px !important;
+    height: 44px !important;
+
+    font-size: 14px !important;
+
+    box-shadow: none !important;
+}
+
+
+.faq-category-label {
+    margin-bottom: 2px !important;
+
+    font-size: 11.5px !important;
+}
+
+
+.faq-category-heading h3 {
+    font-size:
+        clamp(
+            1.45rem,
+            2vw,
+            1.9rem
+        ) !important;
+
+    line-height: 1.2 !important;
+}
+
+
+
+/* ================================================================
+   ACCORDION ALIGNMENT
+================================================================ */
+
+.faq-page-accordion .faq-accordion {
+    width: 100% !important;
+}
+
+
+.faq-page-accordion .faq-question {
+    padding:
+        19px
+        2px !important;
+}
+
+
+.faq-page-accordion .faq-toggle-icon {
+    flex:
+        0
+        0
+        34px !important;
+
+    width: 34px !important;
+    height: 34px !important;
+}
+
+
+
+/* ================================================================
+   MOBILE
+================================================================ */
+
+@media (max-width: 600px) {
+
+    .faq-category-intro,
+    .faq-page-accordion {
+        max-width: none !important;
+    }
+
+
+    .faq-category-navigation {
+        padding:
+            16px
+            15px !important;
+    }
+
+
+    .faq-category-nav-list {
+        display: flex !important;
+
+        gap: 7px !important;
+    }
+
+
+    .faq-category-link {
+        width: auto !important;
+
+        min-height: 35px !important;
+
+        padding:
+            7px
+            10px !important;
+
+        font-size: 12px !important;
+    }
+
+
+    .faq-help-card {
+        padding:
+            16px
+            14px !important;
+    }
+
+
+    .faq-category-heading {
+        gap: 10px !important;
+    }
+
+
+    .faq-category-number {
+        flex-basis: 40px !important;
+
+        width: 40px !important;
+        height: 40px !important;
+
+        font-size: 13px !important;
+    }
+
+
+    .faq-page-accordion .faq-question {
+        font-size: 15.5px !important;
+    }
+
+}
