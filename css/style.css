@@ -10194,3 +10194,206 @@ p {
     }
 
 }
+/* ================================================================
+   FOUNDATION FONT SIZE FIX ONLY
+   No colours, cards, images or layout changes
+================================================================ */
+
+
+/* Main website reading text */
+
+body {
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+}
+
+
+/* Normal paragraphs */
+
+p {
+    font-size: 18px !important;
+    line-height: 1.72 !important;
+}
+
+
+/* Lists */
+
+main li {
+    font-size: 17.5px !important;
+    line-height: 1.68 !important;
+}
+
+
+/* Homepage / secondary page descriptions */
+
+.hero-description,
+.page-hero-description,
+.section-description,
+.about-preview-content p,
+.services-intro p,
+.process-header p,
+.faq-preview-content p {
+    font-size: 19px !important;
+    line-height: 1.7 !important;
+}
+
+
+/* Card foundation text */
+
+.service-card p,
+.trust-item p,
+.why-choose-item p,
+.academic-area-item p,
+.process-step p,
+.about-points p,
+.contact-method-card p,
+.contact-guidance-panel p,
+.contact-enquiry-side p,
+.faq-answer,
+.faq-answer p {
+    font-size: 17.5px !important;
+    line-height: 1.7 !important;
+}
+
+
+/* About section small point text */
+
+.about-point-content p,
+.about-point p {
+    font-size: 17px !important;
+}
+
+
+/* Card headings */
+
+.service-card h3,
+.trust-item h3,
+.why-choose-item h3,
+.academic-area-item h3,
+.process-step h3,
+.contact-method-card h3 {
+    font-size: 22px !important;
+    line-height: 1.3 !important;
+}
+
+
+/* Navigation */
+
+.nav-link {
+    font-size: 16.5px !important;
+}
+
+.mobile-nav-link {
+    font-size: 17px !important;
+}
+
+
+/* Buttons */
+
+.btn {
+    font-size: 16.5px !important;
+    line-height: 1.2 !important;
+}
+
+
+/* Forms */
+
+label,
+input,
+select,
+textarea {
+    font-size: 17px !important;
+}
+
+input,
+select,
+textarea {
+    line-height: 1.5 !important;
+}
+
+
+/* FAQ question titles */
+
+.faq-question {
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+}
+
+
+/* Text links */
+
+.text-link {
+    font-size: 16.5px !important;
+}
+
+
+/* Footer */
+
+.site-footer p,
+.site-footer li,
+.site-footer a {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+}
+
+
+/* Small labels should still remain readable */
+
+.hero-eyebrow,
+.section-eyebrow,
+.page-hero-eyebrow {
+    font-size: 14px !important;
+}
+
+
+/* ================================================================
+   MOBILE
+================================================================ */
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 17px !important;
+    }
+
+    p {
+        font-size: 16.5px !important;
+    }
+
+    main li {
+        font-size: 16.5px !important;
+    }
+
+    .hero-description,
+    .page-hero-description,
+    .section-description {
+        font-size: 17px !important;
+    }
+
+    .service-card p,
+    .trust-item p,
+    .why-choose-item p,
+    .academic-area-item p,
+    .process-step p,
+    .faq-answer,
+    .faq-answer p {
+        font-size: 16.5px !important;
+    }
+
+    .nav-link,
+    .mobile-nav-link {
+        font-size: 16px !important;
+    }
+
+    .btn {
+        font-size: 16px !important;
+    }
+
+    label,
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+
+}
