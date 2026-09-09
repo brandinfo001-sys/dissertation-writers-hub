@@ -7856,3 +7856,476 @@ button:disabled,
    Dissertation Writers Hub
    Homepage Design System Complete
 ================================================================ */
+
+/* ================================================================
+   DESIGN CORRECTION PHASE
+   PART 1 — TYPOGRAPHY + GLOBAL SCALE + BUTTONS
+================================================================ */
+
+
+/* ================================================================
+   1. UPDATED TYPOGRAPHY TOKENS
+================================================================ */
+
+:root {
+
+    --font-heading:
+        "Montserrat",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    --font-body:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+
+    /* Larger readable body typography */
+
+    --text-xs: 0.8125rem;
+    --text-sm: 0.9375rem;
+    --text-base: 1.0625rem;
+    --text-md: 1.125rem;
+    --text-lg: 1.1875rem;
+    --text-xl: 1.3125rem;
+
+
+    /* Stronger heading hierarchy */
+
+    --heading-small:
+        clamp(1.55rem, 2.3vw, 2.15rem);
+
+    --heading-medium:
+        clamp(2.35rem, 4vw, 3.75rem);
+
+    --heading-large:
+        clamp(3rem, 5.5vw, 5.35rem);
+
+
+    --line-tight: 1.05;
+    --line-heading: 1.1;
+    --line-normal: 1.65;
+    --line-relaxed: 1.72;
+
+
+    --tracking-heading: -0.03em;
+    --tracking-tight: -0.045em;
+
+
+    /* Extra accent surface */
+
+    --brand-orange-soft: #FFF3E6;
+}
+
+
+
+/* ================================================================
+   2. BODY TYPOGRAPHY
+================================================================ */
+
+body {
+    font-family: var(--font-body);
+
+    font-size: var(--text-base);
+    line-height: var(--line-normal);
+
+    color: #393536;
+}
+
+
+
+p {
+    font-size: 1.0625rem;
+
+    line-height: 1.72;
+}
+
+
+
+/* ================================================================
+   3. HEADINGS
+================================================================ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+
+    letter-spacing: -0.03em;
+
+    color: #252223;
+}
+
+
+
+h1,
+h2 {
+    font-weight: 800;
+}
+
+
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+
+
+h1 {
+    font-size:
+        clamp(3rem, 5.4vw, 5.35rem);
+
+    line-height: 1.04;
+}
+
+
+
+h2 {
+    font-size:
+        clamp(2.35rem, 4vw, 3.75rem);
+
+    line-height: 1.1;
+}
+
+
+
+h3 {
+    font-size:
+        clamp(1.45rem, 2.2vw, 2rem);
+
+    line-height: 1.2;
+}
+
+
+
+/* ================================================================
+   4. HOMEPAGE HERO TYPOGRAPHY
+================================================================ */
+
+.hero-title {
+    max-width: 760px;
+
+    font-family: var(--font-heading);
+
+    font-size:
+        clamp(3.25rem, 5.5vw, 5.4rem);
+
+    font-weight: 800;
+
+    line-height: 1.02;
+
+    letter-spacing: -0.055em;
+}
+
+
+
+.hero-description {
+    max-width: 680px;
+
+    font-size:
+        clamp(1.1rem, 1.5vw, 1.25rem);
+
+    line-height: 1.7;
+}
+
+
+
+/* ================================================================
+   5. SECTION HEADINGS
+================================================================ */
+
+.section-title {
+    font-family: var(--font-heading);
+
+    font-size:
+        clamp(2.4rem, 4vw, 3.8rem);
+
+    font-weight: 800;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.04em;
+}
+
+
+
+.section-description {
+    max-width: 740px;
+
+    font-size:
+        clamp(1.075rem, 1.4vw, 1.2rem);
+
+    line-height: 1.72;
+}
+
+
+
+/* ================================================================
+   6. EYEBROWS — MORE ORANGE
+================================================================ */
+
+.section-eyebrow {
+    color: var(--brand-orange-dark);
+
+    font-size: 0.82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+}
+
+
+
+.section-eyebrow::before {
+    width: 32px;
+    height: 3px;
+
+    background-color: var(--brand-orange);
+}
+
+
+
+/* Hero eyebrow */
+
+.hero-eyebrow {
+    font-size: 0.84rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.075em;
+}
+
+
+
+/* ================================================================
+   7. NAVIGATION TYPOGRAPHY
+================================================================ */
+
+.nav-link {
+    font-family: var(--font-heading);
+
+    font-size: 0.98rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.01em;
+}
+
+
+
+.nav-link.active,
+.nav-link[aria-current="page"] {
+    font-weight: 700;
+}
+
+
+
+.mobile-nav-link {
+    font-family: var(--font-heading);
+
+    font-size: 1rem;
+
+    font-weight: 600;
+}
+
+
+
+/* ================================================================
+   8. BUTTON SYSTEM
+================================================================ */
+
+.btn {
+    min-height: 52px;
+
+    padding:
+        0.85rem
+        1.55rem;
+
+    border-radius: 10px;
+
+    font-family: var(--font-heading);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.015em;
+}
+
+
+
+.btn-large {
+    min-height: 58px;
+
+    padding:
+        1rem
+        1.85rem;
+
+    font-size: 1.0375rem;
+}
+
+
+
+/* Make orange buttons visually stronger */
+
+.btn-accent {
+    border-color: var(--brand-orange);
+
+    background-color: var(--brand-orange);
+
+    box-shadow:
+        0 10px 28px rgba(246, 135, 18, 0.22);
+}
+
+
+
+.btn-accent:hover {
+    border-color: var(--brand-orange-dark);
+
+    background-color: var(--brand-orange-dark);
+
+    box-shadow:
+        0 14px 34px rgba(246, 135, 18, 0.28);
+}
+
+
+
+/* Primary button stronger */
+
+.btn-primary {
+    box-shadow:
+        0 10px 28px rgba(30, 58, 138, 0.18);
+}
+
+
+
+/* ================================================================
+   9. TEXT LINKS
+================================================================ */
+
+.text-link {
+    font-family: var(--font-heading);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+}
+
+
+
+/* ================================================================
+   10. CARD TYPOGRAPHY
+================================================================ */
+
+.service-card h3,
+.why-choose-item h3,
+.academic-area-item h3,
+.process-step h3,
+.trust-item h3,
+.faq-question {
+    font-family: var(--font-heading);
+}
+
+
+
+/* ================================================================
+   11. MOBILE TYPOGRAPHY
+================================================================ */
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 1rem;
+    }
+
+
+    p {
+        font-size: 1rem;
+
+        line-height: 1.68;
+    }
+
+
+    h1 {
+        font-size:
+            clamp(2.45rem, 10vw, 3.5rem);
+    }
+
+
+    h2 {
+        font-size:
+            clamp(2rem, 8vw, 2.8rem);
+    }
+
+
+    h3 {
+        font-size:
+            clamp(1.35rem, 5.5vw, 1.7rem);
+    }
+
+
+    .hero-title {
+        font-size:
+            clamp(2.55rem, 10vw, 3.65rem);
+
+        line-height: 1.05;
+    }
+
+
+    .hero-description,
+    .section-description {
+        font-size: 1.03rem;
+    }
+
+
+    .section-title {
+        font-size:
+            clamp(2rem, 8vw, 2.85rem);
+    }
+
+
+    .btn,
+    .btn-large {
+        min-height: 54px;
+
+        font-size: 0.98rem;
+    }
+
+}
+
+
+
+/* ================================================================
+   12. SMALL MOBILE
+================================================================ */
+
+@media (max-width: 479px) {
+
+    .hero-title {
+        font-size:
+            clamp(2.3rem, 10.5vw, 3.1rem);
+    }
+
+
+    .section-title {
+        font-size:
+            clamp(1.9rem, 8.5vw, 2.55rem);
+    }
+
+
+    .section-eyebrow,
+    .hero-eyebrow {
+        font-size: 0.76rem;
+    }
+
+}
